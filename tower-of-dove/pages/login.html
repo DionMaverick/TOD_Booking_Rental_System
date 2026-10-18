@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Log in | Tower of Dove Music Studio</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <main class="page" id="auth">
+    <div class="card login">
+      <img class="logo-lg" src="../assets/img/logo.png" alt="Tower of Dove logo">
+
+      <!-- Log in -->
+      <section id="v-login" class="view" hidden>
+        <div class="tabs" role="tablist">
+          <a class="tab on" href="login.html" aria-current="page">Log in</a>
+          <a class="tab" href="register.html">Register</a>
+        </div>
+        <form id="f-login" novalidate>
+          <h1>Welcome back</h1>
+          <p class="sub">Log in to see your bookings and rentals.</p>
+          <div class="ok-box" id="login-ok" hidden></div>
+          <label for="lu">Email</label>
+          <input id="lu" type="email" autocomplete="email">
+          <label for="lp">Password</label>
+          <input id="lp" type="password" autocomplete="current-password">
+          <div class="alert" id="login-err" hidden></div>
+          <button class="btn gold full" type="submit">Log in</button>
+          <p class="mut" style="margin-top:12px"><button type="button" class="lk" id="forgot">Forgot password?</button></p>
+        </form>
+      </section>
+
+      <!-- Forgot password -->
+      <section id="v-forgot" class="view" hidden>
+        <form id="f-forgot" novalidate>
+          <h1>Reset your password</h1>
+          <p class="sub">Enter the email you registered with. We will send you a link to choose a new password.</p>
+          <label for="fe">Email</label>
+          <input id="fe" type="email" autocomplete="email">
+          <div class="alert" id="forgot-err" hidden></div>
+          <div class="ok-box" id="forgot-ok" hidden></div>
+          <button class="btn gold full" type="submit">Send reset link</button>
+          <p class="mut" style="margin-top:12px"><button type="button" class="lk" data-back-login>Back to log in</button></p>
+        </form>
+      </section>
+
+      <!-- Choose a new password (opened from the email link) -->
+      <section id="v-reset" class="view" hidden>
+        <form id="f-reset" novalidate>
+          <h1>Choose a new password</h1>
+          <p class="sub">Use at least 8 characters.</p>
+          <label for="rp1">New password</label>
+          <input id="rp1" type="password" autocomplete="new-password">
+          <label for="rp2">Confirm new password</label>
+          <input id="rp2" type="password" autocomplete="new-password">
+          <div class="alert" id="reset-err" hidden></div>
+          <button class="btn gold full" type="submit">Save new password</button>
+        </form>
+      </section>
+
+      <!-- Invalid or expired link -->
+      <section id="v-expired" class="view" hidden>
+        <h1>Link problem</h1>
+        <div class="alert" id="expired-msg"></div>
+        <button class="btn gold full" type="button" data-to-forgot>Request a new link</button>
+        <p class="mut" style="margin-top:12px"><button type="button" class="lk" data-back-login>Back to log in</button></p>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="../js/login.js"></script>
+</body>
+</html>

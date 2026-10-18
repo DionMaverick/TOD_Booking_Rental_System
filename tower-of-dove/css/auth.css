@@ -1,0 +1,90 @@
+/* Login, register, forgot and reset password */
+
+.login {
+    max-width: 400px;
+    margin: 48px auto;
+}
+
+.logo-lg {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 14px;
+}
+
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 5px 14px;
+    border-radius: 99px;
+    border: 1px solid var(--field-bd);
+    background: var(--surface);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.tab.on {
+    background: var(--sel);
+    color: var(--sel-fg);
+    border-color: var(--sel);
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.login-foot {
+    margin-top: 16px;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+}
+
+.login .lk {
+    margin-left: 0;
+    font-size: inherit;
+    font-weight: 600;
+}
+
+.pw {
+    position: relative;
+}
+
+.pw input {
+    padding-right: 44px;
+}
+
+.pw-toggle {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--mut);
+    cursor: pointer;
+}
+
+.pw-toggle:hover {
+    color: var(--ink);
+    background: var(--dove);
+}
+
+.pw-toggle:focus-visible {
+    outline: 2px solid var(--brand-hi);
+    outline-offset: 1px;
+}
