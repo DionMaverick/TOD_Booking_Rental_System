@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Register | Tower of Dove Music Studio</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <main class="page" id="auth">
+    <div class="card login">
+      <img class="logo-lg" src="../assets/img/logo.png" alt="Tower of Dove logo">
+      <div class="tabs" role="tablist">
+        <a class="tab" href="login.html">Log in</a>
+        <a class="tab on" href="register.html" aria-current="page">Register</a>
+      </div>
+
+      <form id="f-reg" novalidate>
+        <h1>Create your account</h1>
+        <p class="sub">Keep every booking and rental in one place.</p>
+        <div class="two">
+          <div><label for="rg-fn">First name</label><input id="rg-fn" autocomplete="given-name"></div>
+          <div><label for="rg-ln">Last name</label><input id="rg-ln" autocomplete="family-name"></div>
+        </div>
+        <label for="rg-phone">Phone number</label>
+        <input id="rg-phone" placeholder="09XX XXX XXXX" autocomplete="tel">
+        <label for="rg-email">Email</label>
+        <input id="rg-email" type="email" autocomplete="email" placeholder="you@gmail.com">
+        <label for="rg-pass">Password</label>
+        <input id="rg-pass" type="password" autocomplete="new-password">
+        <label for="rg-pass2">Confirm password</label>
+        <input id="rg-pass2" type="password" autocomplete="new-password">
+        <div class="alert" id="reg-err" hidden></div>
+        <button class="btn gold full" type="submit">Create account</button>
+      </form>
+      <div class="ok-box" id="reg-ok" hidden></div>
+
+      <p class="mut login-foot">Already have an account? <a href="login.html">Log in</a>.</p>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="../js/register.js"></script>
+</body>
+</html>
